@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Delete
+{% endblock %}
+
+{% block body %}
+
+{% if tasks %}
+<form action="/delete" method="post">
+    <table>
+        <tr>
+            <th class="checkbox-column">Select</th>
+            <th>Description</th>
+        </tr>
+
+        {% for task in tasks %}
+            <tr>
+                <td class="checkbox-cell">
+                    <input class="form-check-input" name="task" type="checkbox" value="{{ task['task_id'] }}" id="task{{ task['task_id'] }}">
+                </td>
+                <td>
+                    <!--The id of the element this label is bound to via the 'for' attribute-->
+                    <label class="form-check-label" for="task{{ task['task_id'] }}">
+                        {{ task["description"] }}
+                    </label>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    <button type="submit">Delete</button>
+</form>
+
+{% else %}
+    <div class="alert alert-primary">No tasks yet!</div>
+{% endif %}
+
+{% endblock %}

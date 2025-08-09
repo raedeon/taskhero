@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Settings
+{% endblock %}
+
+{% block body %}
+
+    {% set settings = [
+        {'name': 'Change Username', 'path': '/changeusername'},
+        {'name': 'Change Password', 'path': '/changepassword'}
+    ] %}
+
+    <ul class="settings-list">
+        {% for setting in settings %}
+            <li>
+                <a class="settings-anchor" href="{{ setting.path }}">{{ setting.name }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

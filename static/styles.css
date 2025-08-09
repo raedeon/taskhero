@@ -1,0 +1,139 @@
+/* margin is the space between two elements
+border is the line that goes around the padding and content of an element
+padding is the space between the content of an element and its border */
+
+
+/* credit to: https://getcssscan.com/css-buttons-examples (button 14)*/
+button {
+  background-image: linear-gradient(#f7f8fa ,#e7e9ec);
+  border-color: #adb1b8 #a2a6ac #8d9096;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 3px;
+  box-shadow: rgba(255,255,255,.6) 0 1px 0 inset;
+  box-sizing: border-box;
+  color: #0f1111;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Amazon Ember",Arial,sans-serif;
+  font-size: 14px;
+  height: 29px;
+  font-size: 13px;
+  outline: 0;
+  overflow: hidden;
+  padding: 0 11px;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+button:active {
+  border-bottom-color: #a2a6ac;
+}
+
+button:active:hover {
+  border-bottom-color: #a2a6ac;
+}
+
+button:hover {
+  border-color: #a2a6ac #979aa1 #82858a;
+}
+
+button:focus {
+  border-color: #e77600;
+  box-shadow: rgba(228, 121, 17, .5) 0 0 3px 2px;
+  outline: 0;
+}
+
+table {
+    width: 100%; /* ensures the table takes up the full width of its container */
+    border-collapse: collapse; /* collapses borders into a single border, removing gaps between them */
+    margin: 20px 0; /* sets the top and bottom margins to 20 pixels, and the left and right margins to 0 pixels */
+    text-align: left;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+th, td {
+    padding: 12px; /* note margin vs border vs padding */
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.center-body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-table {
+    margin: 0 auto; /* table will have 0 margin on the top and bottom, and automatically calculated equal margins on the left and right, centering it horizontally within its parent container  */
+    display: block;
+}
+
+.center-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkbox-column {
+  width: 30px;
+  text-align: center;
+}
+
+.checkbox-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - var(--nav-height)); /* Centering accounts for the height of the navbar */
+  margin: 0;
+}
+
+.image-center img {
+  max-width: 100%; /* Ensure the image doesn't exceed the container width */
+  height: auto; /* Maintain the image's aspect ratio */
+}
+
+.settings-anchor {
+  color: inherit; /* Makes the link color inherit from its parent element */
+  text-decoration: none; /* Removes the underline from the link */
+}
+
+.settings-anchor:hover {
+text-decoration: underline;
+}
+
+.settings-list {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0;
+  margin: 0;
+}
+
+.settings-list li {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.settings-list li:last-child {
+  border-bottom: none;
+}

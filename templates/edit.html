@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Edit
+{% endblock %}
+
+{% block body %}
+    <form action="/edited" class="center-form" method="post">
+        <select name="type">
+            <option selected> {{ task[0]["type"] }} </option>
+            {% for type in types %}
+                <option>{{ type }}</option>
+            {% endfor %}
+        </select>
+        <input autocomplete="off" autofocus name="description" type="text" value="{{ task[0]['description'] }}">
+        <input autocomplete="off" name="duedate" type="text" onfocus="(this.type='datetime-local')" value="{{ task[0]['duedate'] }}">
+        <select name="priority">
+            <option selected>{{ task[0]["priority"] }}</option>
+            {% for priority in priorities %}
+                <option>{{ priority }}</option>
+            {% endfor %}
+        </select>
+        <input hidden name="task_id" value="{{ task[0]['task_id'] }}">
+        <input hidden name="path" value="{{ path }}">
+        <button type="submit">Edit Task</button>
+    </form>
+
+{% endblock %}

@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Completed
+{% endblock %}
+
+{% block body %}
+
+{% if tasks %}
+    <div class="container">
+        <table class="center-table" id="table">
+            <tr>
+                <th>S/N</th>
+                <th>Type</th>
+                <th>Description</th>
+                <th>Priority</th>
+                <th>Due Date</th>
+                <th>Status</th>
+                {% if tasks %}
+                <th></th>
+                {% endif %}
+                <th>Datetime Added</th>
+                <th>Datetime Last Edited</th>
+                <th>Datetime Completed</th>
+                <th>
+                    <form action="/completed" id="sortForm" method="post">
+                        <select id="sortSelect" name="sort">
+                            <option disabled selected>{{ option }}</option>
+                            {% for header in headers %}
+                                <option>{{ header }}</option>
+                            {% endfor %}
+                        </select>
+                    </form>
+                    <script>
+                        document.getElementById("sortSelect").addEventListener("change", function() {
+                            document.getElementById("sortForm").submit();
+                        });
+                    </script>
+                </th>
+            </tr>
+            {% for task in tasks %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ task["type"] }}</td>
+                    <td>{{ task["description"] }}</td>
+                    <td>{{ task["priority"] }}</td>
+                    <td>{{ task["duedate"] }}</td>
+                    <td>{{ task["status"] }}</td>
+                    <td>
+                        <form action="/uncomplete" method="post">
+                            <input hidden name="task" value="{{ task['task_id'] }}">
+                            <button type="submit">Uncomplete</button>
+                        </form>
+                    </td>
+                    <td>{{ task["datetime_added"] }}</td>
+                    <td>{{ task["datetime_edited"] }}</td>
+                    <td>{{ task["datetime_completed"] }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+   <div class="container" id="piechart" style="width: 900px; height: 500px;"></div>
+   <!--Renders pie chart-->
+   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+   <script type="text/javascript" src="{{ url_for('static', filename='piechart.js') }}"></script>
+
+{% else %}
+<div class="alert alert-primary">No tasks completed yet!</div>
+
+{% endif %}
+
+{% endblock %}

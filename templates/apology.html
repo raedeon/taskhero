@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Error {{ top }}
+{% endblock %}
+
+{% block body %}
+
+    <!--note that background=URL of the custom meme-->
+    <div class="image-center">
+        <img src="https://api.memegen.link/images/custom/{{ top }}/{{ bottom }}.jpg?background=https://content.imageresizer.com/images/memes/everythings-fine-meme-3.jpg&width=400" alt="{{ top }}">
+    </div>
+{% endblock %}
