@@ -1,20 +1,27 @@
 # TaskHero 🦸
 
+![Python](https://img.shields.io/badge/Python-3.7%2B-blue?style=for-the-badge&logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-2.x-black?style=for-the-badge&logo=flask)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](https://opensource.org/licenses/MIT)
+
 TaskHero is a powerful and intuitive task management web application built with Python and Flask. It helps users organize their daily chores, work assignments, and personal goals in a clean, efficient, and user-friendly interface. Stay on top of your responsibilities and become the hero of your own tasks!
 
 ## Table of Contents
-- [About The Project](#about-the-project)
-- [Project Demo](#project-demo)
-- [Key Features](#key-features)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation & Setup](#installation--setup)
-- [File Structure](#file-structure)
-- [Usage Guide](#usage-guide)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
+- [ℹ️ About The Project](#about-the-project)
+- [🎥 Project Demo](#project-demo)
+- [✨ Key Features](#key-features)
+- [🚀 Getting Started](#getting-started)
+  - [🛠 Prerequisites](#prerequisites)
+  - [⚙️ Installation & Setupinstallation--setup)
+- [📂 File Structure](#file-structure)
+- [📖 Usage Guide](#usage-guide)
+- [📜 License](#license)
+- [🙏 Acknowledgements](#acknowledgements)
 
-## About The Project
+## ℹ️ About The Project
 
 TaskHero is designed to be a one-stop solution for personal task management. Built using the Flask web framework and a SQLite database, it provides a robust set of features for creating, viewing, updating, and deleting tasks. The application emphasizes security with password hashing and user-specific data handling, ensuring that each user's task list is private and secure.
 
@@ -24,13 +31,13 @@ TaskHero is designed to be a one-stop solution for personal task management. Bui
 *   **Frontend:** HTML, CSS, JavScript, Bootstrap
 *   **Authentication:** Werkzeug for password hashing, Flask-Session for session management
 
-## Project Demo
+## 🎥 Project Demo
 
 Watch a full walkthrough of the TaskHero application, from user registration to task management and account settings.
 
 [![TaskHero Demo Video](static/thumbnail.png)](https://youtu.be/6h2Y0zDBpOo)
 
-## Key Features
+## ✨ Key Features
 
 ✅ **Secure User Authentication:**
 *   User registration with strong password requirements (12+ characters, uppercase, digit, special character).
@@ -59,16 +66,16 @@ Watch a full walkthrough of the TaskHero application, from user registration to 
 *   Custom apology/error pages for a better user experience.
 *   Persistent sessions ensure you stay logged in until you choose to log out.
 
-## Getting Started
+## 🚀 Getting Started
 
 Follow these instructions to get a local copy of TaskHero up and running on your machine.
 
-### Prerequisites
+### 🛠 Prerequisites
 
 *   Python 3.7+
 *   pip (Python package installer)
 
-### Installation & Setup
+### ⚙️ Installation & Setup
 
 1.  **Clone the repository:**
     ```bash
@@ -98,7 +105,7 @@ Follow these instructions to get a local copy of TaskHero up and running on your
     ```
     The application will be available at `http://127.0.0.1:5000`.
 
-## File Structure
+## 📂 File Structure
 
 ```
 .
@@ -126,7 +133,7 @@ Follow these instructions to get a local copy of TaskHero up and running on your
     └── settings.html
 ```
 
-## Usage Guide
+## 📖 Usage Guide
 
 1.  **Register:** Navigate to the `/register` page to create a new account. You'll need to provide a unique username and a strong password.
 2.  **Login:** Once registered, log in with your credentials. You will be redirected to the main dashboard.
@@ -140,11 +147,11 @@ Follow these instructions to get a local copy of TaskHero up and running on your
 7.  **Delete Tasks:** Go to the "Delete" page, select the tasks you want to remove using the checkboxes, and click "Delete".
 8.  **Settings:** Visit the "Settings" page to change your username or password.
 
-## License
+## 📜 License
 
 This project is distributed under the MIT License. See `LICENSE` for more information.
 
-## Acknowledgements
+## 🙏 Acknowledgements
 *   [CS50 Library](https://cs50.readthedocs.io/libraries/cs50/python/) for its simple and effective SQL database wrapper.
 *   [Flask Framework](https://flask.palletsprojects.com/)
 *   [Werkzeug](https://werkzeug.palletsprojects.com/)
