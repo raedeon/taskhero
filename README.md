@@ -15,7 +15,7 @@ TaskHero is a powerful and intuitive task management web application built with 
 - [✨ Key Features](#key-features)
 - [🚀 Getting Started](#getting-started)
   - [🛠 Prerequisites](#prerequisites)
-  - [⚙️ Installation & Setupinstallation--setup)
+  - [⚙️ Installation & Setupinstallation--setup]
 - [📂 File Structure](#file-structure)
 - [📖 Usage Guide](#usage-guide)
 - [📜 License](#license)
